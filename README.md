@@ -1,6 +1,6 @@
 # OpenDriveSim
 
-An easy-to-use, accessible driving simulator heavily based off of Udacity's [Self-Driving Simulator.](https://github.com/udacity/self-driving-car-sim)
+An easy-to-use, accessible driving simulator heavily based off Udacity's [Self-Driving Simulator.](https://github.com/udacity/self-driving-car-sim)
 -----
 
 ## Features
