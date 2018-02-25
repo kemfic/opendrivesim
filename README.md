@@ -21,7 +21,7 @@ Current driving simulators have lots of drawbacks(low performance, unrealistic, 
 Select "Training Mode" from the game menu, then click on record to choose a directory. Click record again to begin recording data, and end the recording by toggling it again. You can control the vehicle via an analog joystick (recommended), WASD keys, arrow keys, or mouse/trackpad.
 
 ### Testing out your Neural Net
-After training your model to output steering and throttle(optional), save your model with a .h5 extension, then use the [drive.py](https://github.com/udacity/CarND-Behavioral-Cloning-P3/blob/master/drive.py) using the following command:
+After training your model to output steering and throttle(optional), save your model with a .h5 extension, then use the [drive.py](https://github.com/udacity/CarND-Behavioral-Cloning-P3/blob/master/drive.py) script with the following command:
 
 ```python drive.py model_dir.h5 output_dir``` 
 
