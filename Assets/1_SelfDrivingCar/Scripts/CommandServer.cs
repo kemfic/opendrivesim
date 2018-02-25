@@ -9,8 +9,9 @@ using System.Security.AccessControl;
 public class CommandServer : MonoBehaviour
 {
 	public CarRemoteControl CarRemoteControl;
-	public Camera FrontFacingCamera;
-	private SocketIOComponent _socket;
+    public Camera FrontFacingCamera;
+    public Camera DepthCamera;
+    private SocketIOComponent _socket;
 	private CarController _carController;
 
 	// Use this for initialization
@@ -64,8 +65,9 @@ public class CommandServer : MonoBehaviour
 				data["steering_angle"] = _carController.CurrentSteerAngle.ToString("N4");
 				data["throttle"] = _carController.AccelInput.ToString("N4");
 				data["speed"] = _carController.CurrentSpeed.ToString("N4");
-				data["image"] = Convert.ToBase64String(CameraHelper.CaptureFrame(FrontFacingCamera));
-				_socket.Emit("telemetry", new JSONObject(data));
+                data["image"] = Convert.ToBase64String(CameraHelper.CaptureFrame(FrontFacingCamera));
+                data["depthimg"] = Convert.ToBase64String(CameraHelper.CaptureFrame(DepthCamera));
+                _socket.Emit("telemetry", new JSONObject(data));
 			}
 		});
 
