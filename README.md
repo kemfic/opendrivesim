@@ -26,7 +26,9 @@ After training your model to output steering and throttle(optional), save your m
 ```python drive.py model_dir.h5 output_dir``` 
 
 output_dir is for outputting image frames of your vehicle driving. If you'd like to create a video from the outputted frames, use [video.py](https://github.com/udacity/CarND-Behavioral-Cloning-P3/blob/master/video.py) with the following command:
+
 ```python video.py output_dir ```
+
 and append ```--fps 60``` if you'd like to change the framerate. Default framerate is 60 FPS. 
 
 
