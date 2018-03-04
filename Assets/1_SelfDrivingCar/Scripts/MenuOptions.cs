@@ -33,8 +33,10 @@ public class MenuOptions : MonoBehaviour
     {
         if (track == 0) {
             SceneManager.LoadScene("LakeTrackTraining");
-        } else {
+        } else if (track == 1){
             SceneManager.LoadScene("JungleTrackTraining");
+        } else if (track == 2){
+            SceneManager.LoadScene("MountainTrackTraining");
         }
 
     }
@@ -43,16 +45,21 @@ public class MenuOptions : MonoBehaviour
     {
         if (track == 0) {
             SceneManager.LoadScene("LakeTrackAutonomous");
-        } else {
+        } else if (track == 1){
             SceneManager.LoadScene("JungleTrackAutonomous");
+        } else if (track == 2){
+            SceneManager.LoadScene("MountainTrackAutonomous");
         }
     }
 
     public void SetLakeTrack()
     {
+
+        track = 0;
         outlines [0].effectColor = new Color (0, 0, 0);
         outlines [1].effectColor = new Color (255, 255, 255);
-        track = 0;
+        outlines [2].effectColor = new Color (255, 255, 255);
+        
     }
 
     public void SetMountainTrack()
@@ -60,6 +67,15 @@ public class MenuOptions : MonoBehaviour
         track = 1;
         outlines [1].effectColor = new Color (0, 0, 0);
         outlines [0].effectColor = new Color (255, 255, 255);
+        outlines [2].effectColor = new Color (255, 255, 255);
+    }
+
+    public void SetAkinaTrack()
+    {
+        track = 2;
+        outlines[2].effectColor = new Color(0, 0, 0);
+        outlines[0].effectColor = new Color(255, 255, 255);
+        outlines[1].effectColor = new Color(255, 255, 255);
     }
 
 }
